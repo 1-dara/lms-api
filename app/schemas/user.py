@@ -1,13 +1,13 @@
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
-from app.models.user import UserRole
+from typing import Optional
 
 
 class UserRegister(BaseModel):
     full_name: str
     email: EmailStr
     password: str
-    role: UserRole = UserRole.STUDENT
+    is_admin: bool = False
 
 
 class UserLogin(BaseModel):
@@ -19,7 +19,7 @@ class UserResponse(BaseModel):
     id: int
     full_name: str
     email: EmailStr
-    role: UserRole
+    is_admin: bool
     is_active: bool
     created_at: datetime
 

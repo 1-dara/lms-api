@@ -1,10 +1,14 @@
-from app.database import Base
 from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from alembic import context
-from app.models import User, UserRole
 from app.core.config import settings
+from app.models.user import User
+from app.models.course import Course
+from app.models.lesson import Lesson
+from app.models.enrollment import Enrollment
+from app.models.image import Image
+from app.database import Base
 
 config = context.config
 
@@ -25,8 +29,10 @@ def run_migrations_online():
         poolclass=pool.NullPool,
     )
     with connectable.connect() as connection:
-        context.configure(connection=connection,
-                          target_metadata=target_metadata)
+        context.configure(
+            connection=connection,
+            target_metadata=target_metadata
+        )
         with context.begin_transaction():
             context.run_migrations()
 
