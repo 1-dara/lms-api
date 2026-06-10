@@ -2,8 +2,8 @@
 
 A fully functional, production-grade e-learning backend built with **FastAPI** and **PostgreSQL**. Deployed and live.
 
-🔗 **Live API Docs:** https://lms-api-3p9x.onrender.com/docs  
-💻 **GitHub:** https://github.com/1-dara/lms-api
+ **Live API Docs:** https://lms-api-3p9x.onrender.com/docs  
+ **GitHub:** https://github.com/1-dara/lms-api
 
 ---
 
