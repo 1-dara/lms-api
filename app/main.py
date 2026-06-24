@@ -1,3 +1,4 @@
+from fastapi.responses import RedirectResponse
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import auth, courses, lessons, images
@@ -24,4 +25,4 @@ app.include_router(images.router, prefix="/api", tags=["Images"])
 
 @app.get("/")
 async def root():
-    return {"message": "LMS API is running 📚"}
+    return RedirectResponse(url="/docs")
