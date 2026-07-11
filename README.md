@@ -16,6 +16,8 @@ A fully functional, production-grade e-learning backend built with **FastAPI** a
 - **Student Enrollments** — Track which students are enrolled in which courses
 - **Image Uploads** — Permanent cloud image storage via Cloudinary
 - **Auto-generated Docs** — Interactive Swagger UI at `/docs`
+- **Redis Caching** — Property listings and detail pages cached for 5 minutes, reducing database load on repeated requests
+
 
 ---
 
@@ -32,6 +34,8 @@ A fully functional, production-grade e-learning backend built with **FastAPI** a
 | Cloudinary | Image storage |
 | Render | Deployment |
 | Pydantic | Data validation |
+| Redis | Caching layer for property/product/course listings |
+
 
 ---
 
@@ -126,6 +130,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 CLOUDINARY_CLOUD_NAME=your-cloud-name
 CLOUDINARY_API_KEY=your-api-key
 CLOUDINARY_API_SECRET=your-api-secret
+REDIS_URL="your-redis-url"
 ```
 
 5. **Run database migrations**
