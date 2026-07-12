@@ -17,6 +17,7 @@ A fully functional, production-grade e-learning backend built with **FastAPI** a
 - **Image Uploads** — Permanent cloud image storage via Cloudinary
 - **Auto-generated Docs** — Interactive Swagger UI at `/docs`
 - **Redis Caching** — Property listings and detail pages cached for 5 minutes, reducing database load on repeated requests
+- **Rate Limiting** — 100 requests per minute per IP address to prevent API abuse
 
 
 ---
@@ -34,7 +35,7 @@ A fully functional, production-grade e-learning backend built with **FastAPI** a
 | Cloudinary | Image storage |
 | Render | Deployment |
 | Pydantic | Data validation |
-| Redis | Caching layer for property/product/course listings |
+| slowapi | Rate limiting middleware |
 
 
 ---
